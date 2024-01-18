@@ -73,6 +73,7 @@ Add Items To Cart
 Modifier Cart
     Go To    ${cart_url}
     Input Text    xpath=//input[@type='number']    10
+    Click Button    xpath=//button[@class='action update']
     Sleep    5 seconds
     Click Element    xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]
 
