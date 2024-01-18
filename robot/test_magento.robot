@@ -71,6 +71,8 @@ Add Items To Cart
 
 Modifier Cart
     Go To    ${cart_url}
+    Input Text    xpath=//*[@id="cart-579901-qty"]    10
+    Sleep    5 seconds
     Click Element    xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]
     # ${cart_items}    Get WebElements    xpath=//*[@id="shopping-cart-table"]
     # ${item_count}    Get Length    ${cart_items}
