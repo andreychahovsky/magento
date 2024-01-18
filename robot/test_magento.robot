@@ -66,17 +66,17 @@ Add Items To Cart
 
     Go To    ${cart_url}
     Sleep    5 seconds
-    ${cart_items}    Get WebElements    xpath=//*[@id="shopping-cart-table"]
+    ${cart_items}    Get WebElements    xpath=//tr[@class='item-info']
     ${item_count}    Get Length    ${cart_items}
-    Should Be Equal As Numbers    ${item_count}    2    "I was waiting that in the cart 2 elements, yet there are ${item_count}"
+    Should Be Equal As Numbers    ${item_count}    2    "Checking add\nI was waiting that in the cart 2 elements, yet there are ${item_count}"
 
 Modifier Cart
     Go To    ${cart_url}
-    Input Text    xpath=//*[@id="cart-579901-qty"]    10
+    Input Text    xpath=//input[@type='number']    10
     Sleep    5 seconds
     Click Element    xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]
 
     Sleep    5 seconds
-    ${cart_items}    Get WebElements    xpath=//*[@id="shopping-cart-table"]
+    ${cart_items}    Get WebElements    xpath=//tr[@class='item-info']
     ${item_count}    Get Length    ${cart_items}
-    Should Be Equal As Numbers    ${item_count}    1    "I was waiting that in the cart 1 elements, yet there are ${item_count}"
+    Should Be Equal As Numbers    ${item_count}    1    "Checking modify\nI was waiting that in the cart 1 elements, yet there are ${item_count}"
