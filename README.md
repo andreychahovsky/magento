@@ -4,10 +4,10 @@ _test the site_
 
 https://magento.softwaretestingboard.com/
 
-* creer un compte
+* create an account
 * login
 * add the articles into the cart
     (assert)
-* Modfier the cart (edit/delete)
+* modfier the cart (edit/delete)
     (assert)
 * logout
