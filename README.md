@@ -7,7 +7,7 @@ https://magento.softwaretestingboard.com/
 * create an account +
 * login +
 * add the articles into the cart +
-    (assert) -
+    (assert) +
 * modfier the cart (edit/delete) +
-    (assert) -
+    (assert) +
 * logout +
