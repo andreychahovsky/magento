@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20240118 16:51:28.688" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20240119 09:32:28.102" rpa="false" schemaversion="4">
 <suite id="s1" name="Test Magento" source="/home/andrew/Documents/QA/Docaposte/programmation/RobotFramework/magento/robot/test_magento.robot">
-<test id="s1-t1" name="SauceLab Test" line="20">
+<test id="s1-t1" name="Magento" line="20">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>https://www.google.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240118 16:51:28.952" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20240118 16:51:28.952" endtime="20240118 16:51:31.032"/>
+<msg timestamp="20240119 09:32:28.299" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20240119 09:32:28.299" endtime="20240119 09:32:30.583"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240118 16:51:31.032" endtime="20240118 16:51:31.137"/>
+<status status="PASS" starttime="20240119 09:32:30.583" endtime="20240119 09:32:30.688"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240118 16:51:31.137" endtime="20240118 16:51:31.140"/>
+<status status="PASS" starttime="20240119 09:32:30.688" endtime="20240119 09:32:30.691"/>
 </kw>
 <kw name="Login">
 <arg>${email}</arg>
@@ -24,229 +24,279 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${login_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:51:31.141" level="INFO">Opening url 'https://magento.softwaretestingboard.com/customer/account/login/'</msg>
-<status status="PASS" starttime="20240118 16:51:31.141" endtime="20240118 16:51:33.171"/>
+<msg timestamp="20240119 09:32:30.693" level="INFO">Opening url 'https://magento.softwaretestingboard.com/customer/account/login/'</msg>
+<status status="PASS" starttime="20240119 09:32:30.692" endtime="20240119 09:32:34.666"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240118 16:51:33.171" endtime="20240118 16:51:33.173"/>
+<status status="PASS" starttime="20240119 09:32:34.667" endtime="20240119 09:32:34.668"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=email</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:33.174" level="INFO">Typing text 'vasia@pupkin.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20240118 16:51:33.173" endtime="20240118 16:51:33.334"/>
+<msg timestamp="20240119 09:32:34.669" level="INFO">Typing text 'vasia@pupkin.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20240119 09:32:34.668" endtime="20240119 09:32:34.898"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=pass</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:33.335" level="INFO">Typing text 'password-1' into text field 'id=pass'.</msg>
-<status status="PASS" starttime="20240118 16:51:33.335" endtime="20240118 16:51:33.523"/>
+<msg timestamp="20240119 09:32:34.899" level="INFO">Typing text 'password-1' into text field 'id=pass'.</msg>
+<status status="PASS" starttime="20240119 09:32:34.898" endtime="20240119 09:32:35.056"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=send2</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:33.524" level="INFO">Clicking button 'id=send2'.</msg>
-<status status="PASS" starttime="20240118 16:51:33.523" endtime="20240118 16:51:39.026"/>
+<msg timestamp="20240119 09:32:35.057" level="INFO">Clicking button 'id=send2'.</msg>
+<status status="PASS" starttime="20240119 09:32:35.056" endtime="20240119 09:32:38.523"/>
 </kw>
-<status status="PASS" starttime="20240118 16:51:31.140" endtime="20240118 16:51:39.026"/>
+<status status="PASS" starttime="20240119 09:32:30.692" endtime="20240119 09:32:38.523"/>
 </kw>
 <kw name="Add Items To Cart">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${bags_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:51:39.027" level="INFO">Opening url 'https://magento.softwaretestingboard.com/gear/bags.html'</msg>
-<status status="PASS" starttime="20240118 16:51:39.027" endtime="20240118 16:51:39.988"/>
+<msg timestamp="20240119 09:32:38.524" level="INFO">Opening url 'https://magento.softwaretestingboard.com/gear/bags.html'</msg>
+<status status="PASS" starttime="20240119 09:32:38.524" endtime="20240119 09:32:40.328"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[7]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:39.989" level="INFO">Clicking element 'xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[7]'.</msg>
-<status status="PASS" starttime="20240118 16:51:39.988" endtime="20240118 16:51:41.972"/>
+<msg timestamp="20240119 09:32:40.330" level="INFO">Clicking element 'xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[7]'.</msg>
+<status status="PASS" starttime="20240119 09:32:40.328" endtime="20240119 09:32:41.963"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=product-addtocart-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:41.973" level="INFO">Clicking button 'id=product-addtocart-button'.</msg>
-<status status="PASS" starttime="20240118 16:51:41.973" endtime="20240118 16:51:42.332"/>
+<msg timestamp="20240119 09:32:41.964" level="INFO">Clicking button 'id=product-addtocart-button'.</msg>
+<status status="PASS" starttime="20240119 09:32:41.963" endtime="20240119 09:32:42.317"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>5 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240118 16:51:42.333" endtime="20240118 16:51:42.335"/>
+<status status="PASS" starttime="20240119 09:32:42.318" endtime="20240119 09:32:42.324"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240118 16:51:47.336" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240118 16:51:42.335" endtime="20240118 16:51:47.337"/>
+<msg timestamp="20240119 09:32:47.326" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 09:32:42.325" endtime="20240119 09:32:47.326"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${bags_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:51:47.338" level="INFO">Opening url 'https://magento.softwaretestingboard.com/gear/bags.html'</msg>
-<status status="PASS" starttime="20240118 16:51:47.337" endtime="20240118 16:51:48.250"/>
+<msg timestamp="20240119 09:32:47.327" level="INFO">Opening url 'https://magento.softwaretestingboard.com/gear/bags.html'</msg>
+<status status="PASS" starttime="20240119 09:32:47.326" endtime="20240119 09:32:48.994"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[4]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:48.251" level="INFO">Clicking element 'xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[4]'.</msg>
-<status status="PASS" starttime="20240118 16:51:48.250" endtime="20240118 16:51:49.105"/>
+<msg timestamp="20240119 09:32:48.995" level="INFO">Clicking element 'xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[4]'.</msg>
+<status status="PASS" starttime="20240119 09:32:48.994" endtime="20240119 09:32:51.361"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=product-addtocart-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240118 16:51:49.105" level="INFO">Clicking button 'id=product-addtocart-button'.</msg>
-<status status="PASS" starttime="20240118 16:51:49.105" endtime="20240118 16:51:49.513"/>
+<msg timestamp="20240119 09:32:51.363" level="INFO">Clicking button 'id=product-addtocart-button'.</msg>
+<status status="PASS" starttime="20240119 09:32:51.361" endtime="20240119 09:32:51.532"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>5 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240118 16:51:49.514" endtime="20240118 16:51:49.515"/>
+<status status="PASS" starttime="20240119 09:32:51.532" endtime="20240119 09:32:51.534"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240118 16:51:54.516" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240118 16:51:49.515" endtime="20240118 16:51:54.516"/>
+<msg timestamp="20240119 09:32:56.537" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 09:32:51.535" endtime="20240119 09:32:56.538"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${cart_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:51:54.518" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
-<status status="PASS" starttime="20240118 16:51:54.517" endtime="20240118 16:52:02.172"/>
+<msg timestamp="20240119 09:32:56.538" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<status status="PASS" starttime="20240119 09:32:56.538" endtime="20240119 09:32:59.355"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240118 16:52:07.173" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240118 16:52:02.172" endtime="20240118 16:52:07.173"/>
+<msg timestamp="20240119 09:33:04.356" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240119 09:32:59.355" endtime="20240119 09:33:04.357"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>${cart_items}</var>
 <arg>xpath=//tr[@class='item-info']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20240118 16:52:07.222" level="INFO">${cart_items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0b10653ae5b716b450bbe6b29b82753f", element="7CDE1DAD6449E46AB3E99C1E6CC44D21_element_325")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
-<status status="PASS" starttime="20240118 16:52:07.174" endtime="20240118 16:52:07.222"/>
+<msg timestamp="20240119 09:33:04.407" level="INFO">${cart_items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0c01ea2db602f37e3ad581d531867dec", element="BDDECA99C2250805B9A0225F3CF5CFB1_element_360")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<status status="PASS" starttime="20240119 09:33:04.357" endtime="20240119 09:33:04.407"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${item_count}</var>
 <arg>${cart_items}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240118 16:52:07.222" level="INFO">Length is 2</msg>
-<msg timestamp="20240118 16:52:07.222" level="INFO">${item_count} = 2</msg>
-<status status="PASS" starttime="20240118 16:52:07.222" endtime="20240118 16:52:07.222"/>
+<msg timestamp="20240119 09:33:04.408" level="INFO">Length is 2</msg>
+<msg timestamp="20240119 09:33:04.408" level="INFO">${item_count} = 2</msg>
+<status status="PASS" starttime="20240119 09:33:04.407" endtime="20240119 09:33:04.408"/>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <arg>${item_count}</arg>
 <arg>2</arg>
 <arg>"Checking add\nI was waiting that in the cart 2 elements, yet there are ${item_count}"</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20240118 16:52:07.223" level="INFO">Argument types are:
+<msg timestamp="20240119 09:33:04.410" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20240118 16:52:07.223" endtime="20240118 16:52:07.224"/>
+<status status="PASS" starttime="20240119 09:33:04.408" endtime="20240119 09:33:04.410"/>
 </kw>
-<status status="PASS" starttime="20240118 16:51:39.026" endtime="20240118 16:52:07.224"/>
+<status status="PASS" starttime="20240119 09:32:38.523" endtime="20240119 09:33:04.410"/>
 </kw>
 <kw name="Modifier Cart">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${cart_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:52:07.225" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
-<status status="PASS" starttime="20240118 16:52:07.224" endtime="20240118 16:52:10.511"/>
+<msg timestamp="20240119 09:33:04.412" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<status status="PASS" starttime="20240119 09:33:04.412" endtime="20240119 09:33:07.222"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_before}</var>
+<arg>xpath=//span[@class="price"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240119 09:33:07.273" level="INFO">${price_before} = </msg>
+<status status="PASS" starttime="20240119 09:33:07.223" endtime="20240119 09:33:07.273"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@type='number']</arg>
 <arg>10</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240118 16:52:10.512" level="INFO">Typing text '10' into text field 'xpath=//input[@type='number']'.</msg>
-<status status="PASS" starttime="20240118 16:52:10.511" endtime="20240118 16:52:11.279"/>
+<msg timestamp="20240119 09:33:07.274" level="INFO">Typing text '10' into text field 'xpath=//input[@type='number']'.</msg>
+<msg timestamp="20240119 09:33:12.732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240119 09:33:12.733" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.216)
+Stacktrace:
+#0 0x55b3bf421f83 &lt;unknown&gt;
+#1 0x55b3bf0dab2b &lt;unknown&gt;
+#2 0x55b3bf120237 &lt;unknown&gt;
+#3 0x55b3bf1540b2 &lt;unknown&gt;
+#4 0x55b3bf11db49 &lt;unknown&gt;
+#5 0x55b3bf1544ce &lt;unknown&gt;
+#6 0x55b3bf173006 &lt;unknown&gt;
+#7 0x55b3bf153e53 &lt;unknown&gt;
+#8 0x55b3bf11bdd4 &lt;unknown&gt;
+#9 0x55b3bf11d1de &lt;unknown&gt;
+#10 0x55b3bf3e6531 &lt;unknown&gt;
+#11 0x55b3bf3ea455 &lt;unknown&gt;
+#12 0x55b3bf3d2f55 &lt;unknown&gt;
+#13 0x55b3bf3eb0ef &lt;unknown&gt;
+#14 0x55b3bf3b699f &lt;unknown&gt;
+#15 0x55b3bf40f008 &lt;unknown&gt;
+#16 0x55b3bf40f1d7 &lt;unknown&gt;
+#17 0x55b3bf421124 &lt;unknown&gt;
+#18 0x7f693e294ac3 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20240119 09:33:07.273" endtime="20240119 09:33:12.735"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=//button[@class='action update']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240118 16:52:11.279" level="INFO">Clicking button 'xpath=//button[@class='action update']'.</msg>
-<status status="PASS" starttime="20240118 16:52:11.279" endtime="20240118 16:52:11.363"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.735" endtime="20240119 09:33:12.735"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240118 16:52:16.363" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240118 16:52:11.363" endtime="20240118 16:52:16.363"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.735" endtime="20240119 09:33:12.736"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_after}</var>
+<arg>xpath=//span[@class="price"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240119 09:33:12.736" endtime="20240119 09:33:12.736"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240119 09:33:12.736" endtime="20240119 09:33:12.736"/>
+</kw>
+<kw name="Should Not Be Equal As Numbers" library="BuiltIn">
+<arg>first=${price_before}</arg>
+<arg>second=${price_after}</arg>
+<arg>msg="Price is not changed..."</arg>
+<doc>Fails if objects are equal after converting them to real numbers.</doc>
+<status status="NOT RUN" starttime="20240119 09:33:12.736" endtime="20240119 09:33:12.736"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240118 16:52:16.364" level="INFO">Clicking element 'xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]'.</msg>
-<status status="PASS" starttime="20240118 16:52:16.364" endtime="20240118 16:52:20.798"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.737" endtime="20240119 09:33:12.737"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240118 16:52:25.799" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240118 16:52:20.798" endtime="20240118 16:52:25.799"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.737" endtime="20240119 09:33:12.737"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>${cart_items}</var>
 <arg>xpath=//tr[@class='item-info']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20240118 16:52:25.816" level="INFO">${cart_items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0b10653ae5b716b450bbe6b29b82753f", element="DD18EA7A3928A5BEE2A3B07D61CAE69D_element_408")&gt;]</msg>
-<status status="PASS" starttime="20240118 16:52:25.799" endtime="20240118 16:52:25.816"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.737" endtime="20240119 09:33:12.737"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${item_count}</var>
 <arg>${cart_items}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240118 16:52:25.816" level="INFO">Length is 1</msg>
-<msg timestamp="20240118 16:52:25.816" level="INFO">${item_count} = 1</msg>
-<status status="PASS" starttime="20240118 16:52:25.816" endtime="20240118 16:52:25.816"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.737" endtime="20240119 09:33:12.737"/>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <arg>${item_count}</arg>
 <arg>1</arg>
 <arg>"Checking modify\nI was waiting that in the cart 1 elements, yet there are ${item_count}"</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20240118 16:52:25.817" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20240118 16:52:25.816" endtime="20240118 16:52:25.817"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.737" endtime="20240119 09:33:12.737"/>
 </kw>
-<status status="PASS" starttime="20240118 16:52:07.224" endtime="20240118 16:52:25.817"/>
+<status status="FAIL" starttime="20240119 09:33:04.411" endtime="20240119 09:33:12.738"/>
 </kw>
 <kw name="Logout">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${logout_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240118 16:52:25.817" level="INFO">Opening url 'https://magento.softwaretestingboard.com/customer/account/logout/'</msg>
-<status status="PASS" starttime="20240118 16:52:25.817" endtime="20240118 16:52:30.269"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240118 16:52:30.269" endtime="20240118 16:52:30.271"/>
-</kw>
-<status status="PASS" starttime="20240118 16:52:25.817" endtime="20240118 16:52:30.271"/>
+<status status="NOT RUN" starttime="20240119 09:33:12.738" endtime="20240119 09:33:12.738"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240118 16:52:30.271" endtime="20240118 16:52:30.362"/>
+<status status="PASS" starttime="20240119 09:33:12.738" endtime="20240119 09:33:12.915"/>
 </kw>
-<status status="PASS" starttime="20240118 16:51:28.952" endtime="20240118 16:52:30.362"/>
+<status status="FAIL" starttime="20240119 09:32:28.298" endtime="20240119 09:33:12.915">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.216)
+Stacktrace:
+#0 0x55b3bf421f83 &lt;unknown&gt;
+#1 0x55b3bf0dab2b &lt;unknown&gt;
+#2 0x55b3bf120237 &lt;unknown&gt;
+#3 0x55b3bf1540b2 &lt;unknown&gt;
+#4 0x55b3bf11db49 &lt;unknown&gt;
+#5 0x55b3bf1544ce &lt;unknown&gt;
+#6 0x55b3bf173006 &lt;unknown&gt;
+#7 0x55b3bf153e53 &lt;unknown&gt;
+#8 0x55b3bf11bdd4 &lt;unknown&gt;
+#9 0x55b3bf11d1de &lt;unknown&gt;
+#10 0x55b3bf3e6531 &lt;unknown&gt;
+#11 0x55b3bf3ea455 &lt;unknown&gt;
+#12 0x55b3bf3d2f55 &lt;unknown&gt;
+#13 0x55b3bf3eb0ef &lt;unknown&gt;
+#14 0x55b3bf3b699f &lt;unknown&gt;
+#15 0x55b3bf40f008 &lt;unknown&gt;
+#16 0x55b3bf40f1d7 &lt;unknown&gt;
+#17 0x55b3bf421124 &lt;unknown&gt;
+#18 0x7f693e294ac3 &lt;unknown&gt;
+</status>
 </test>
-<status status="PASS" starttime="20240118 16:51:28.688" endtime="20240118 16:52:30.363"/>
+<status status="FAIL" starttime="20240119 09:32:28.103" endtime="20240119 09:33:12.916"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Magento">Test Magento</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Magento">Test Magento</stat>
 </suite>
 </statistics>
 <errors>

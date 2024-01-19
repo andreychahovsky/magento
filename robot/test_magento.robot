@@ -17,7 +17,7 @@ ${email}    vasia@pupkin.com
 ${password}    password-1
 
 *** Test Cases ***
-SauceLab Test
+Magento
     Maximize Browser Window
     Set Selenium Implicit Wait    30 seconds
     # Create An Account    ${first_name}    ${last_name}    ${email}    ${password}
@@ -37,47 +37,62 @@ SauceLab Test
 #     Input Password    id=password    ${password}
 #     Input Password    id=password-confirmation    ${password}
 #     Set Selenium Implicit Wait    5 seconds
-#     Click Element    xpath=//form[@id='form-validate']/div/div/button/span
+#     Click Element    xpath://form[@id='form-validate']/div/div/button/span
 
 Logout
     Go To    ${logout_url}
-    Set Selenium Implicit Wait    30 seconds
+    Sleep    30 seconds
 
 Login
     [Arguments]    ${email}    ${password}
     Go To    ${login_url}
-    Set Selenium Implicit Wait    10 seconds
+    Sleep    10 seconds
     Input Text    id=email    ${email}
     Input Text    id=pass    ${password}
     Click Button    id=send2
 
 Add Items To Cart
     Go To    ${bags_url}
-    Click Element    xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[7]
+    Click Element    xpath://*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[7]
     Click Button    id=product-addtocart-button
-    Set Selenium Implicit Wait    5 seconds
     Sleep    5 seconds
 
     Go To    ${bags_url}
-    Click Element    xpath=//*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[4]
+    Click Element    xpath://*[@id="maincontent"]/div[3]/div[1]/div[4]/ol/li[4]
     Click Button    id=product-addtocart-button
-    Set Selenium Implicit Wait    5 seconds
     Sleep    5 seconds
 
     Go To    ${cart_url}
     Sleep    5 seconds
-    ${cart_items}    Get WebElements    xpath=//tr[@class='item-info']
+    ${cart_items}    Get WebElements    xpath://tr[@class="item-info"]
     ${item_count}    Get Length    ${cart_items}
     Should Be Equal As Numbers    ${item_count}    2    "Checking add\nI was waiting that in the cart 2 elements, yet there are ${item_count}"
 
 Modifier Cart
     Go To    ${cart_url}
-    Input Text    xpath=//input[@type='number']    10
-    Click Button    xpath=//button[@class='action update']
     Sleep    5 seconds
-    Click Element    xpath=//*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]
+    # check that total price
+    ${price_before}    Get Text    xpath://tr[@class="grand totals"]/td/strong/span
+    # check qty de items
+    ${firs_item_qty}    Get Element Attribute    locator=xpath://div[@class="control qty"]/label/input    attribute=value
+
+    # Remove item
+    Click Element    xpath://*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]
 
     Sleep    5 seconds
-    ${cart_items}    Get WebElements    xpath=//tr[@class='item-info']
+    ${price_after}    Get Text    xpath://tr[@class="grand totals"]/td/strong/span
+    # ${price_after}    Get Text    xpath://span[@class="price"]
+    Sleep    5 seconds
+    Should Not Be Equal As Strings    first=${price_before}    second=${price_after}    msg="Price is not changed..."
+
+    
+
+    Sleep    5 seconds
+    ${cart_items}    Get WebElements    xpath://tr[@class="item-info"]
     ${item_count}    Get Length    ${cart_items}
     Should Be Equal As Numbers    ${item_count}    1    "Checking modify\nI was waiting that in the cart 1 elements, yet there are ${item_count}"
+
+    # Clear the cart for the future
+    Sleep    5 seconds
+    # Click Element    xpath://a[@title="Remove item"]
+    Click Element    xpath://*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[3]

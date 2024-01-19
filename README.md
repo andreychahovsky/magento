@@ -11,3 +11,7 @@ https://magento.softwaretestingboard.com/
 * modfier the cart (edit/delete) +
     (assert) +
 * logout +
+
+
+* check that total price is changable +
+* check qty de items - check but not utilise
